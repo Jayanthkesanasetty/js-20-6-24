@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width;initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>TASK ON 20-6-24</h1></center> <hr>
+    <pre style="font-size: larger;">
+        1. Create a class Rectangle with attributes width and height. Include methods to calculate the area and perimeter of the rectangle.
+
+        ---------code--------
+            class Rectangle{
+            width; height;
+            constructor(width,height){
+                this.width=width;
+                this.height=height;
+            }
+             area(){
+                return +this.width * +this.height;
+            }
+            perimeter(){
+                return 2*(+this.width + +this.height)
+            }
+          }
+          var rec=new Rectangle(2,3)
+          console.log(rec.area());
+          console.log(rec.perimeter());
+
+          -------------output-------------
+          6
+          10
+
+        2. Implement a class BankAccount with attributes accountNumber;accountHolder;and balance. Include methods to deposit and withdraw money from the account.
+
+        ---------code--------
+        accountNumber; accountHolder;balance;
+        constructor(accountHolder,accountNumber,balance){
+            this.accountHolder=accountHolder;
+            this.accountNumber=accountNumber;
+            this.balance=balance;
+        }
+        bal(){
+            return this.balance; 
+        }
+        deposit(){
+            return  (dep + +this.balance);
+        }
+        withdraw(){
+            return  +this.balance - wd;
+        }
+        }
+        var bale=new BankAccount("SURESH.K","522000234571","50000");
+        var dep=+prompt("Enter Deposit Amount: ");
+        var wd=+prompt("Enter Withdraw Amount: ");
+        console.log(bale);
+        console.log("Available balance: "+ bale.bal());
+        console.log("Total balance After Deposit: "+ bale.deposit());
+        console.log("Total balance after withdraw: "+bale.withdraw());
+
+        -------------output-------------
+
+        Available balance: 50000
+        Total balance After Deposit: 50000
+        Total balance after withdraw: 50000
+
+
+    3. Develop a class Employee with properties name;position;and salary. Add a method to calculate the yearly bonus based on the salary.
+
+        ---------code--------
+        class Employee {
+        name;position;salary;
+        constructor(name,position,salary){
+        this.name=name;
+        this.position=position;
+        this.salary=salary;
+        }
+        Bonus(){
+        return (+this.salary*8.33)/100;
+        }
+        }
+        var hike=new Employee("Naresh.P","HR","45000");
+        console.log("The Yearly Bonus According to Salary is  "+hike.Bonus());
+
+        -------------output-------------
+        The Yearly Bonus According to Salary is  3748.5
+
+    4. Create a class Circle with attribute radius. Include methods to calculate the circumference and area of the circle.
+
+    ---------code--------
+        class Circle{
+        radius;
+       constructor(radius){
+           this.radius=radius;
+       }
+       circumference(){
+           return (2*3.14*+this.radius);
+       }
+       area(){
+           return (3.14*+this.radius*+this.radius);
+       }
+       }
+       var Cir=new Circle(2);
+       console.log("The Circumference of a Circle: " +Cir.circumference());
+       console.log("The Area of a Circle: " +Cir.area());
+
+       -------------output-------------
+        The Circumference of a Circle: 12.56
+        The Area of a Circle: 12.56
+
+    5. Implement a class Product with properties name;price;and quantity. Include a method to calculate the total value of the product based on price and quantity.
+
+    ---------code--------
+    class Product {
+        name;price;quantity;
+    constructor(name,price,quantity){
+       this.name=name;
+       this.price=price;
+       this.quantity=quantity;
+    }
+    total(){
+       return (+this.price * quant);
+    }
+       }
+       var tot=new Product("Rice","15","1");
+       var quant=+prompt("Enter how many Kg's of RICE you want:  ")
+       console.log("The total cost for "+quant+"kg's of RICE is: " +tot.total()+" rps");
+
+    -------------output-------------
+
+    The total cost for 5kg's of RICE is: 75 rps
+
+
+    6. Create a base class Shape with properties name and color. Implement two subclasses Circle and Rectangle that inherit from Shape and add specific properties and methods for calculating area and perimeter.
+
+    ---------code--------
+    class Shape  {
+        name ; color;
+        constructor(name, color){
+            this.name=name;
+            this.color=color;
+        }
+    }
+       class Circle extends Shape{
+        radius;
+        constructor(name,color,radius){
+            super(name,color)
+            this.radius=radius;
+        }
+        area(){
+           return (2*3.14*+this.radius);
+        }
+        perimeter(){
+            return (3.14*+this.radius*+this.radius)
+        }
+        }
+        class Rectangle extends Shape{
+        length;width;
+        constructor(name,color,length,width){
+            super(name,color)
+            this.length=length;
+            this.width=width;
+        }
+        area(){
+           return (+this.length * +this.width);
+        }
+        perimeter(){
+            return 2*(+this.length + +this.width);
+        }
+        }
+        var cir=new Circle("Round","Black","3")
+        console.log(cir);
+        console.log("Area of a circle:  " +cir.area());
+        console.log("Perimeter of a circle:  "+cir.perimeter());
+
+        var rec=new Rectangle("cuboid","Blue","5","8")
+        console.log(rec);
+        console.log("Area of a rectangle:  " +rec.area());
+        console.log("Perimeter of a rectangle:  "+rec.perimeter());
+
+        -------------output-------------
+        
+        Circle { name: 'Round', color: 'Black', radius: '3' }
+        Area of a circle:  18.84
+        Perimeter of a circle:  28.259999999999998
+        Rectangle { name: 'cuboid', color: 'Blue', length: '5', width: '8' }
+        Area of a rectangle:  40
+        Perimeter of a rectangle:  26
+
+
+
+    7. Implement a base class Vehicle with properties name;model;and year. Create subclasses Car and Motorcycle that inherit from Vehicle and add specific properties and methods.
+       
+    ---------code--------
+
+    class Vehicle {
+        name;model; year;
+        constructor(name,model,year){
+            this.name=name;
+            this.model=model;
+            this.year=year;
+        }
+    }
+    class car extends Vehicle{
+        Mileage;
+        color;
+        constructor(name,model,year,Mileage,color){
+            super(name,model,year);
+            this.Mileage=Mileage;
+            this.color=color;
+        }
+    }
+    class bike extends Vehicle{
+        Mileage;
+        color;
+        seat;
+        constructor(name,model,year,Mileage,color,seat){
+            super(name,model,year);
+            this.Mileage=Mileage;
+            this.color=color;
+            this.seat=seat;
+        }
+    }
+    var TATA=new car("Indica","v2" ,"2012","20km","silver")
+    console.log(TATA);
+    var FZ=new bike("FZ-5","f-5" ,"2019","40km","Black","2-seats")
+    console.log(FZ);
+
+    -------------output-------------
+
+    car {
+        name: 'Indica',
+        model: 'v2',
+        year: '2012',
+        Mileage: '20km',
+        color: 'silver'
+      }
+      bike {
+        name: 'FZ-5',
+        model: 'f-5',
+        year: '2019',
+        Mileage: '40km',
+        color: 'Black',
+        seat: '2-seats'
+      }
+
+</pre>
+    <script>
+        // //1
+    //   class Rectangle{
+    //     width; height;
+    //     constructor(width,height){
+    //         this.width=width;
+    //         this.height=height;
+    //     }
+    //      area(){
+    //         return +this.width * +this.height;
+    //     }
+    //     perimeter(){
+    //         return 2*(+this.width + +this.height)
+    //     }
+    //   }
+    //   var rec=new Rectangle(2,3)
+    //   console.log(rec.area());
+    //   console.log(rec.perimeter());
+
+    
+    //2
+        // class BankAccount{
+        // accountNumber; accountHolder;balance;
+        // constructor(accountHolder,accountNumber,balance){
+        //     this.accountHolder=accountHolder;
+        //     this.accountNumber=accountNumber;
+        //     this.balance=balance;
+        // }
+        // bal(){
+        //     return this.balance; 
+        // }
+        // deposit(){
+        //     return  (dep + +this.balance);
+        // }
+        // withdraw(){
+        //     return  +this.balance - wd;
+        // }
+        // }
+        // var bale=new BankAccount("SURESH.K","522000234571","50000");
+        // var dep=+prompt("Enter Deposit Amount: ");
+        // var wd=+prompt("Enter Withdraw Amount: ");
+        // console.log(bale);
+        // console.log("Available balance: "+ bale.bal());
+        // console.log("Total balance After Deposit: "+ bale.deposit());
+        // console.log("Total balance after withdraw: "+bale.withdraw());
+
+
+            //3
+            // class Employee {
+            // name;position;salary;
+            // constructor(name,position,salary){
+            //     this.name=name;
+            //     this.position=position;
+            //     this.salary=salary;
+            // }
+            // Bonus(){
+            //     return (+this.salary*8.33)/100;
+            // }
+            // }
+            // var hike=new Employee("Naresh.P","HR","45000");
+            // console.log("The Yearly Bonus According to Salary is  "+hike.Bonus());
+
+            
+            //4
+            // class Circle{
+            //  radius;
+            // constructor(radius){
+            //     this.radius=radius;
+            // }
+            // circumference(){
+            //     return (2*3.14*+this.radius);
+            // }
+            // area(){
+            //     return (3.14*+this.radius*+this.radius);
+            // }
+            // }
+            // var Cir=new Circle(2);
+            // console.log("The Circumference of a Circle: " +Cir.circumference());
+            // console.log("The Area of a Circle: " +Cir.area());
+
+            //5
+            // class Product {
+            //      name;price;quantity;
+            // constructor(name,price,quantity){
+            //     this.name=name;
+            //     this.price=price;
+            //     this.quantity=quantity;
+            // }
+            // total(){
+            //     return (+this.price * quant);
+            // }
+            //     }
+            //     var tot=new Product("Rice","15","1");
+            //     var quant=+prompt("Enter how many Kg's of RICE you want:  ")
+            //     console.log("The total cost for "+quant+"kg's of RICE is: " +tot.total()+" rps");
+
+            //6
+            // class Shape  {
+            //     name ; color;
+            //     constructor(name, color){
+            //         this.name=name;
+            //         this.color=color;
+            //     }
+            // }
+            //    class Circle extends Shape{
+            //     radius;
+            //     constructor(name,color,radius){
+            //         super(name,color)
+            //         this.radius=radius;
+            //     }
+            //     area(){
+            //        return (2*3.14*+this.radius);
+            //     }
+            //     perimeter(){
+            //         return (3.14*+this.radius*+this.radius)
+            //     }
+            //     }
+            //     class Rectangle extends Shape{
+            //     length;width;
+            //     constructor(name,color,length,width){
+            //         super(name,color)
+            //         this.length=length;
+            //         this.width=width;
+            //     }
+            //     area(){
+            //        return (+this.length * +this.width);
+            //     }
+            //     perimeter(){
+            //         return 2*(+this.length + +this.width);
+            //     }
+            //     }
+            //     var cir=new Circle("Round","Black","3")
+            //     console.log(cir);
+            //     console.log("Area of a circle:  " +cir.area());
+            //     console.log("Perimeter of a circle:  "+cir.perimeter());
+
+            //     var rec=new Rectangle("cuboid","Blue","5","8")
+            //     console.log(rec);
+            //     console.log("Area of a rectangle:  " +rec.area());
+            //     console.log("Perimeter of a rectangle:  "+rec.perimeter());
+
+            //7
+            // class Vehicle {
+            //     name;model; year;
+            //     constructor(name,model,year){
+            //         this.name=name;
+            //         this.model=model;
+            //         this.year=year;
+            //     }
+            // }
+            // class car extends Vehicle{
+            //     Mileage;
+            //     color;
+            //     constructor(name,model,year,Mileage,color){
+            //         super(name,model,year);
+            //         this.Mileage=Mileage;
+            //         this.color=color;
+            //     }
+            // }
+            // class bike extends Vehicle{
+            //     Mileage;
+            //     color;
+            //     seat;
+            //     constructor(name,model,year,Mileage,color,seat){
+            //         super(name,model,year);
+            //         this.Mileage=Mileage;
+            //         this.color=color;
+            //         this.seat=seat;
+            //     }
+            // }
+            // var TATA=new car("Indica","v2" ,"2012","20km","silver")
+            // console.log(TATA);
+            // var FZ=new bike("FZ-5","f-5" ,"2019","40km","Black","2-seats")
+            // console.log(FZ);
+            
+ </script>
+</body>
+</html>
